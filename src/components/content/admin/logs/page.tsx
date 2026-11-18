@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
 import {
   History,
   RotateCcw,
@@ -130,7 +131,7 @@ export default function AdminLogsPage() {
       {/* Header Section (RULE:BW Typography) */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-5">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-foreground text-[11px] font-bold uppercase mb-2">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-muted text-muted-foreground border border-zinc-200 dark:border-zinc-800 text-foreground text-[11px] font-bold uppercase mb-2">
             <History className="w-3.5 h-3.5" />
             <span>AUDIT TRAIL & UNDO HISTORY</span>
           </div>
@@ -142,7 +143,7 @@ export default function AdminLogsPage() {
           </p>
         </div>
 
-        <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 px-3 py-2 rounded-xl self-start sm:self-center">
+        <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono bg-muted text-muted-foreground border border-zinc-200 dark:border-zinc-800 px-3 py-2 rounded-xl self-start sm:self-center">
           <Clock className="w-4 h-4 text-foreground" />
           <span>Rolling History: {logs.length} / 20 Logs</span>
         </div>
@@ -175,24 +176,24 @@ export default function AdminLogsPage() {
             placeholder="Search logs by action, staff name, or email..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-white dark:bg-card border border-zinc-200 dark:border-zinc-800 rounded-xl pl-10 pr-4 py-2.5 text-xs text-foreground placeholder:text-muted-foreground focus:outline-none transition-all"
+            className="w-full bg-card text-card-foreground border border-zinc-200 dark:border-zinc-800 rounded-xl pl-10 pr-4 py-2.5 text-xs text-foreground placeholder:text-muted-foreground focus:outline-none transition-all"
           />
         </div>
 
         <div className="flex items-center gap-2 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
           {['all', 'firms', 'challenges', 'deals', 'events', 'reviews', 'messages', 'settings', 'roles'].map(
             (mod) => (
-              <button
+              <Button variant="ghost"
                 key={mod}
                 onClick={() => setSelectedModuleFilter(mod)}
                 className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all uppercase cursor-pointer shrink-0 border ${
                   selectedModuleFilter === mod
-                    ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white font-bold'
-                    : 'bg-white text-muted-foreground dark:bg-card dark:text-muted-foreground border-zinc-200 dark:border-zinc-800 hover:text-foreground'
+                    ? 'bg-primary text-primary-foreground border-primary font-bold'
+                    : 'bg-card text-muted-foreground border-zinc-200 dark:border-zinc-800 hover:text-foreground'
                 }`}
               >
                 {mod}
-              </button>
+              </Button>
             )
           )}
         </div>
@@ -208,7 +209,7 @@ export default function AdminLogsPage() {
             return (
               <div
                 key={log.id}
-                className={`bg-white dark:bg-card border rounded-2xl transition-all ${
+                className={`bg-card text-card-foreground border rounded-2xl transition-all ${
                   log.is_reverted
                     ? 'border-zinc-200 dark:border-zinc-800 opacity-60'
                     : 'border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 shadow-sm'
@@ -217,14 +218,14 @@ export default function AdminLogsPage() {
                 <div className="p-4 sm:p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
                   {/* Left Metadata */}
                   <div className="flex items-start gap-3.5">
-                    <div className="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center text-foreground shrink-0 mt-0.5">
+                    <div className="w-10 h-10 rounded-xl bg-muted text-muted-foreground border border-zinc-200 dark:border-zinc-800 flex items-center justify-center text-muted-foreground shrink-0 mt-0.5">
                       <ModuleIcon className="w-5 h-5" />
                     </div>
 
                     <div className="space-y-1">
                       <div className="flex flex-wrap items-center gap-2">
-                        <span className="font-semibold text-sm text-foreground">{log.action}</span>
-                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-foreground uppercase border border-zinc-200 dark:border-zinc-700">
+                        <span className="font-semibold text-sm text-card-foreground">{log.action}</span>
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-muted text-muted-foreground uppercase border border-zinc-200 dark:border-zinc-700">
                           {log.module}
                         </span>
                         {log.is_reverted && (
@@ -250,25 +251,25 @@ export default function AdminLogsPage() {
 
                   {/* Action Buttons */}
                   <div className="flex items-center gap-2 self-end md:self-center">
-                    <button
+                    <Button variant="ghost"
                       onClick={() => toggleExpand(log.id)}
-                      className="px-3 py-1.5 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 text-xs font-semibold text-foreground flex items-center gap-1.5 transition-colors cursor-pointer"
+                      className="px-3 py-1.5 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 text-xs font-semibold text-card-foreground flex items-center gap-1.5 transition-colors cursor-pointer"
                     >
                       <span>Diff State</span>
                       {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
-                    </button>
+                    </Button>
 
                     {!log.is_reverted ? (
-                      <button
+                      <Button variant="ghost"
                         onClick={() => handleRevert(log.id)}
                         disabled={revertingId === log.id}
-                        className="px-4 py-1.5 rounded-xl bg-black text-white hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200 text-xs font-semibold transition-all cursor-pointer shadow flex items-center gap-1.5 disabled:opacity-50"
+                        className="px-4 py-1.5 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 text-xs font-semibold transition-all cursor-pointer shadow flex items-center gap-1.5 disabled:opacity-50"
                       >
                         <RotateCcw className={`w-3.5 h-3.5 ${revertingId === log.id ? 'animate-spin' : ''}`} />
                         <span>{revertingId === log.id ? 'Undoing...' : 'Undo / Revert'}</span>
-                      </button>
+                      </Button>
                     ) : (
-                      <span className="text-[11px] font-mono text-muted-foreground italic px-2 py-1 bg-zinc-100 dark:bg-zinc-900 rounded-lg">
+                      <span className="text-[11px] font-mono text-muted-foreground italic px-2 py-1 bg-muted text-muted-foreground rounded-lg">
                         Undone by {log.reverted_by || 'Admin'}
                       </span>
                     )}
@@ -305,7 +306,7 @@ export default function AdminLogsPage() {
             );
           })
         ) : (
-          <div className="p-12 text-center bg-white dark:bg-card border border-zinc-200 dark:border-zinc-800 rounded-2xl space-y-3">
+          <div className="p-12 text-center bg-card text-card-foreground border border-zinc-200 dark:border-zinc-800 rounded-2xl space-y-3">
             <History className="w-8 h-8 text-muted-foreground mx-auto" />
             <h3 className="text-base font-semibold text-foreground">No Audit Logs Found</h3>
             <p className="text-xs text-muted-foreground">
