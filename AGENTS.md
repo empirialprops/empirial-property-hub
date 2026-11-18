@@ -34,3 +34,4 @@ use the editor.
 - Isolate original browser service modules behind lazy ClientOnly boundaries because Firebase and storage initialization must not execute during SSR.
 - Translate legacy navigation and image imports through the compatibility modules so the preserved source runs without a second router or Next.js runtime.
 - Preserve the imported project's strict TypeScript semantics without enabling extra index-access or exact-optional restrictions, avoiding unrelated source rewrites during migration.
+- Explicitly stage application source under directories named `logs`; the managed ignore rules otherwise omit these pages from deployments.
