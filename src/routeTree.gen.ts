@@ -10,33 +10,582 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CategoryRouteImport } from './routes/$category'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AdminRouteImport } from './routes/admin'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as CareersRouteImport } from './routes/careers'
+import { Route as ChallengesRouteImport } from './routes/challenges'
+import { Route as CompareRouteImport } from './routes/compare'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DealsRouteImport } from './routes/deals'
+import { Route as EventsRouteImport } from './routes/events'
+import { Route as FirmsRouteImport } from './routes/firms'
+import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
+import { Route as CategoryChallengesRouteImport } from './routes/$category_.challenges'
+import { Route as CategoryDealsRouteImport } from './routes/$category_.deals'
+import { Route as AdminAdvertisementsRouteImport } from './routes/admin_.advertisements'
+import { Route as AdminAwardsRouteImport } from './routes/admin_.awards'
+import { Route as AdminBlogRouteImport } from './routes/admin_.blog'
+import { Route as AdminChallengesRouteImport } from './routes/admin_.challenges'
+import { Route as AdminDealsRouteImport } from './routes/admin_.deals'
+import { Route as AdminEventsRouteImport } from './routes/admin_.events'
+import { Route as AdminFileSystemRouteImport } from './routes/admin_.file-system'
+import { Route as AdminFirmsRouteImport } from './routes/admin_.firms'
+import { Route as AdminLoginRouteImport } from './routes/admin_.login'
+import { Route as AdminLogsRouteImport } from './routes/admin_.logs'
+import { Route as AdminMarketTickerRouteImport } from './routes/admin_.market-ticker'
+import { Route as AdminMediaRouteImport } from './routes/admin_.media'
+import { Route as AdminMessagesRouteImport } from './routes/admin_.messages'
+import { Route as AdminPageBuilderRouteImport } from './routes/admin_.page-builder'
+import { Route as AdminPlatformsRouteImport } from './routes/admin_.platforms'
+import { Route as AdminReferralsRouteImport } from './routes/admin_.referrals'
+import { Route as AdminReviewsRouteImport } from './routes/admin_.reviews'
+import { Route as AdminRolesRouteImport } from './routes/admin_.roles'
+import { Route as AdminSettingsRouteImport } from './routes/admin_.settings'
+import { Route as AdminSocialRouteImport } from './routes/admin_.social'
+import { Route as AdminSpreadsRouteImport } from './routes/admin_.spreads'
+import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
+import { Route as FirmsSlugRouteImport } from './routes/firms_.$slug'
+import { Route as AdminChallengesBatchRouteImport } from './routes/admin_.challenges.batch'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CategoryRoute = CategoryRouteImport.update({
+  id: '/$category',
+  path: '/$category',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareersRoute = CareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChallengesRoute = ChallengesRouteImport.update({
+  id: '/challenges',
+  path: '/challenges',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompareRoute = CompareRouteImport.update({
+  id: '/compare',
+  path: '/compare',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DealsRoute = DealsRouteImport.update({
+  id: '/deals',
+  path: '/deals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FirmsRoute = FirmsRouteImport.update({
+  id: '/firms',
+  path: '/firms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
+  id: '/terms-and-conditions',
+  path: '/terms-and-conditions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CategoryChallengesRoute = CategoryChallengesRouteImport.update({
+  id: '/$category_/challenges',
+  path: '/$category/challenges',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CategoryDealsRoute = CategoryDealsRouteImport.update({
+  id: '/$category_/deals',
+  path: '/$category/deals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminAdvertisementsRoute = AdminAdvertisementsRouteImport.update({
+  id: '/admin_/advertisements',
+  path: '/admin/advertisements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminAwardsRoute = AdminAwardsRouteImport.update({
+  id: '/admin_/awards',
+  path: '/admin/awards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminBlogRoute = AdminBlogRouteImport.update({
+  id: '/admin_/blog',
+  path: '/admin/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminChallengesRoute = AdminChallengesRouteImport.update({
+  id: '/admin_/challenges',
+  path: '/admin/challenges',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminDealsRoute = AdminDealsRouteImport.update({
+  id: '/admin_/deals',
+  path: '/admin/deals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminEventsRoute = AdminEventsRouteImport.update({
+  id: '/admin_/events',
+  path: '/admin/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminFileSystemRoute = AdminFileSystemRouteImport.update({
+  id: '/admin_/file-system',
+  path: '/admin/file-system',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminFirmsRoute = AdminFirmsRouteImport.update({
+  id: '/admin_/firms',
+  path: '/admin/firms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLoginRoute = AdminLoginRouteImport.update({
+  id: '/admin_/login',
+  path: '/admin/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLogsRoute = AdminLogsRouteImport.update({
+  id: '/admin_/logs',
+  path: '/admin/logs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminMarketTickerRoute = AdminMarketTickerRouteImport.update({
+  id: '/admin_/market-ticker',
+  path: '/admin/market-ticker',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminMediaRoute = AdminMediaRouteImport.update({
+  id: '/admin_/media',
+  path: '/admin/media',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminMessagesRoute = AdminMessagesRouteImport.update({
+  id: '/admin_/messages',
+  path: '/admin/messages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminPageBuilderRoute = AdminPageBuilderRouteImport.update({
+  id: '/admin_/page-builder',
+  path: '/admin/page-builder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminPlatformsRoute = AdminPlatformsRouteImport.update({
+  id: '/admin_/platforms',
+  path: '/admin/platforms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminReferralsRoute = AdminReferralsRouteImport.update({
+  id: '/admin_/referrals',
+  path: '/admin/referrals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminReviewsRoute = AdminReviewsRouteImport.update({
+  id: '/admin_/reviews',
+  path: '/admin/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRolesRoute = AdminRolesRouteImport.update({
+  id: '/admin_/roles',
+  path: '/admin/roles',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSettingsRoute = AdminSettingsRouteImport.update({
+  id: '/admin_/settings',
+  path: '/admin/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSocialRoute = AdminSocialRouteImport.update({
+  id: '/admin_/social',
+  path: '/admin/social',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSpreadsRoute = AdminSpreadsRouteImport.update({
+  id: '/admin_/spreads',
+  path: '/admin/spreads',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog_/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FirmsSlugRoute = FirmsSlugRouteImport.update({
+  id: '/firms_/$slug',
+  path: '/firms/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminChallengesBatchRoute = AdminChallengesBatchRouteImport.update({
+  id: '/batch',
+  path: '/batch',
+  getParentRoute: () => AdminChallengesRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$category': typeof CategoryRoute
+  '/about': typeof AboutRoute
+  '/admin': typeof AdminRoute
+  '/blog': typeof BlogRoute
+  '/careers': typeof CareersRoute
+  '/challenges': typeof ChallengesRoute
+  '/compare': typeof CompareRoute
+  '/contact': typeof ContactRoute
+  '/deals': typeof DealsRoute
+  '/events': typeof EventsRoute
+  '/firms': typeof FirmsRoute
+  '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/profile': typeof ProfileRoute
+  '/reviews': typeof ReviewsRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/$category/challenges': typeof CategoryChallengesRoute
+  '/$category/deals': typeof CategoryDealsRoute
+  '/admin/advertisements': typeof AdminAdvertisementsRoute
+  '/admin/awards': typeof AdminAwardsRoute
+  '/admin/blog': typeof AdminBlogRoute
+  '/admin/challenges': typeof AdminChallengesRouteWithChildren
+  '/admin/deals': typeof AdminDealsRoute
+  '/admin/events': typeof AdminEventsRoute
+  '/admin/file-system': typeof AdminFileSystemRoute
+  '/admin/firms': typeof AdminFirmsRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/logs': typeof AdminLogsRoute
+  '/admin/market-ticker': typeof AdminMarketTickerRoute
+  '/admin/media': typeof AdminMediaRoute
+  '/admin/messages': typeof AdminMessagesRoute
+  '/admin/page-builder': typeof AdminPageBuilderRoute
+  '/admin/platforms': typeof AdminPlatformsRoute
+  '/admin/referrals': typeof AdminReferralsRoute
+  '/admin/reviews': typeof AdminReviewsRoute
+  '/admin/roles': typeof AdminRolesRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/social': typeof AdminSocialRoute
+  '/admin/spreads': typeof AdminSpreadsRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/firms/$slug': typeof FirmsSlugRoute
+  '/admin/challenges/batch': typeof AdminChallengesBatchRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$category': typeof CategoryRoute
+  '/about': typeof AboutRoute
+  '/admin': typeof AdminRoute
+  '/blog': typeof BlogRoute
+  '/careers': typeof CareersRoute
+  '/challenges': typeof ChallengesRoute
+  '/compare': typeof CompareRoute
+  '/contact': typeof ContactRoute
+  '/deals': typeof DealsRoute
+  '/events': typeof EventsRoute
+  '/firms': typeof FirmsRoute
+  '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/profile': typeof ProfileRoute
+  '/reviews': typeof ReviewsRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/$category/challenges': typeof CategoryChallengesRoute
+  '/$category/deals': typeof CategoryDealsRoute
+  '/admin/advertisements': typeof AdminAdvertisementsRoute
+  '/admin/awards': typeof AdminAwardsRoute
+  '/admin/blog': typeof AdminBlogRoute
+  '/admin/challenges': typeof AdminChallengesRouteWithChildren
+  '/admin/deals': typeof AdminDealsRoute
+  '/admin/events': typeof AdminEventsRoute
+  '/admin/file-system': typeof AdminFileSystemRoute
+  '/admin/firms': typeof AdminFirmsRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/logs': typeof AdminLogsRoute
+  '/admin/market-ticker': typeof AdminMarketTickerRoute
+  '/admin/media': typeof AdminMediaRoute
+  '/admin/messages': typeof AdminMessagesRoute
+  '/admin/page-builder': typeof AdminPageBuilderRoute
+  '/admin/platforms': typeof AdminPlatformsRoute
+  '/admin/referrals': typeof AdminReferralsRoute
+  '/admin/reviews': typeof AdminReviewsRoute
+  '/admin/roles': typeof AdminRolesRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/social': typeof AdminSocialRoute
+  '/admin/spreads': typeof AdminSpreadsRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/firms/$slug': typeof FirmsSlugRoute
+  '/admin/challenges/batch': typeof AdminChallengesBatchRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$category': typeof CategoryRoute
+  '/about': typeof AboutRoute
+  '/admin': typeof AdminRoute
+  '/blog': typeof BlogRoute
+  '/careers': typeof CareersRoute
+  '/challenges': typeof ChallengesRoute
+  '/compare': typeof CompareRoute
+  '/contact': typeof ContactRoute
+  '/deals': typeof DealsRoute
+  '/events': typeof EventsRoute
+  '/firms': typeof FirmsRoute
+  '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/profile': typeof ProfileRoute
+  '/reviews': typeof ReviewsRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
+  '/$category_/challenges': typeof CategoryChallengesRoute
+  '/$category_/deals': typeof CategoryDealsRoute
+  '/admin_/advertisements': typeof AdminAdvertisementsRoute
+  '/admin_/awards': typeof AdminAwardsRoute
+  '/admin_/blog': typeof AdminBlogRoute
+  '/admin_/challenges': typeof AdminChallengesRouteWithChildren
+  '/admin_/deals': typeof AdminDealsRoute
+  '/admin_/events': typeof AdminEventsRoute
+  '/admin_/file-system': typeof AdminFileSystemRoute
+  '/admin_/firms': typeof AdminFirmsRoute
+  '/admin_/login': typeof AdminLoginRoute
+  '/admin_/logs': typeof AdminLogsRoute
+  '/admin_/market-ticker': typeof AdminMarketTickerRoute
+  '/admin_/media': typeof AdminMediaRoute
+  '/admin_/messages': typeof AdminMessagesRoute
+  '/admin_/page-builder': typeof AdminPageBuilderRoute
+  '/admin_/platforms': typeof AdminPlatformsRoute
+  '/admin_/referrals': typeof AdminReferralsRoute
+  '/admin_/reviews': typeof AdminReviewsRoute
+  '/admin_/roles': typeof AdminRolesRoute
+  '/admin_/settings': typeof AdminSettingsRoute
+  '/admin_/social': typeof AdminSocialRoute
+  '/admin_/spreads': typeof AdminSpreadsRoute
+  '/blog_/$slug': typeof BlogSlugRoute
+  '/firms_/$slug': typeof FirmsSlugRoute
+  '/admin_/challenges/batch': typeof AdminChallengesBatchRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/$category'
+    | '/about'
+    | '/admin'
+    | '/blog'
+    | '/careers'
+    | '/challenges'
+    | '/compare'
+    | '/contact'
+    | '/deals'
+    | '/events'
+    | '/firms'
+    | '/pricing'
+    | '/privacy-policy'
+    | '/profile'
+    | '/reviews'
+    | '/terms-and-conditions'
+    | '/$category/challenges'
+    | '/$category/deals'
+    | '/admin/advertisements'
+    | '/admin/awards'
+    | '/admin/blog'
+    | '/admin/challenges'
+    | '/admin/deals'
+    | '/admin/events'
+    | '/admin/file-system'
+    | '/admin/firms'
+    | '/admin/login'
+    | '/admin/logs'
+    | '/admin/market-ticker'
+    | '/admin/media'
+    | '/admin/messages'
+    | '/admin/page-builder'
+    | '/admin/platforms'
+    | '/admin/referrals'
+    | '/admin/reviews'
+    | '/admin/roles'
+    | '/admin/settings'
+    | '/admin/social'
+    | '/admin/spreads'
+    | '/blog/$slug'
+    | '/firms/$slug'
+    | '/admin/challenges/batch'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/$category'
+    | '/about'
+    | '/admin'
+    | '/blog'
+    | '/careers'
+    | '/challenges'
+    | '/compare'
+    | '/contact'
+    | '/deals'
+    | '/events'
+    | '/firms'
+    | '/pricing'
+    | '/privacy-policy'
+    | '/profile'
+    | '/reviews'
+    | '/terms-and-conditions'
+    | '/$category/challenges'
+    | '/$category/deals'
+    | '/admin/advertisements'
+    | '/admin/awards'
+    | '/admin/blog'
+    | '/admin/challenges'
+    | '/admin/deals'
+    | '/admin/events'
+    | '/admin/file-system'
+    | '/admin/firms'
+    | '/admin/login'
+    | '/admin/logs'
+    | '/admin/market-ticker'
+    | '/admin/media'
+    | '/admin/messages'
+    | '/admin/page-builder'
+    | '/admin/platforms'
+    | '/admin/referrals'
+    | '/admin/reviews'
+    | '/admin/roles'
+    | '/admin/settings'
+    | '/admin/social'
+    | '/admin/spreads'
+    | '/blog/$slug'
+    | '/firms/$slug'
+    | '/admin/challenges/batch'
+  id:
+    | '__root__'
+    | '/'
+    | '/$category'
+    | '/about'
+    | '/admin'
+    | '/blog'
+    | '/careers'
+    | '/challenges'
+    | '/compare'
+    | '/contact'
+    | '/deals'
+    | '/events'
+    | '/firms'
+    | '/pricing'
+    | '/privacy-policy'
+    | '/profile'
+    | '/reviews'
+    | '/terms-and-conditions'
+    | '/$category_/challenges'
+    | '/$category_/deals'
+    | '/admin_/advertisements'
+    | '/admin_/awards'
+    | '/admin_/blog'
+    | '/admin_/challenges'
+    | '/admin_/deals'
+    | '/admin_/events'
+    | '/admin_/file-system'
+    | '/admin_/firms'
+    | '/admin_/login'
+    | '/admin_/logs'
+    | '/admin_/market-ticker'
+    | '/admin_/media'
+    | '/admin_/messages'
+    | '/admin_/page-builder'
+    | '/admin_/platforms'
+    | '/admin_/referrals'
+    | '/admin_/reviews'
+    | '/admin_/roles'
+    | '/admin_/settings'
+    | '/admin_/social'
+    | '/admin_/spreads'
+    | '/blog_/$slug'
+    | '/firms_/$slug'
+    | '/admin_/challenges/batch'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CategoryRoute: typeof CategoryRoute
+  AboutRoute: typeof AboutRoute
+  AdminRoute: typeof AdminRoute
+  BlogRoute: typeof BlogRoute
+  CareersRoute: typeof CareersRoute
+  ChallengesRoute: typeof ChallengesRoute
+  CompareRoute: typeof CompareRoute
+  ContactRoute: typeof ContactRoute
+  DealsRoute: typeof DealsRoute
+  EventsRoute: typeof EventsRoute
+  FirmsRoute: typeof FirmsRoute
+  PricingRoute: typeof PricingRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  ProfileRoute: typeof ProfileRoute
+  ReviewsRoute: typeof ReviewsRoute
+  TermsAndConditionsRoute: typeof TermsAndConditionsRoute
+  CategoryChallengesRoute: typeof CategoryChallengesRoute
+  CategoryDealsRoute: typeof CategoryDealsRoute
+  AdminAdvertisementsRoute: typeof AdminAdvertisementsRoute
+  AdminAwardsRoute: typeof AdminAwardsRoute
+  AdminBlogRoute: typeof AdminBlogRoute
+  AdminChallengesRoute: typeof AdminChallengesRouteWithChildren
+  AdminDealsRoute: typeof AdminDealsRoute
+  AdminEventsRoute: typeof AdminEventsRoute
+  AdminFileSystemRoute: typeof AdminFileSystemRoute
+  AdminFirmsRoute: typeof AdminFirmsRoute
+  AdminLoginRoute: typeof AdminLoginRoute
+  AdminLogsRoute: typeof AdminLogsRoute
+  AdminMarketTickerRoute: typeof AdminMarketTickerRoute
+  AdminMediaRoute: typeof AdminMediaRoute
+  AdminMessagesRoute: typeof AdminMessagesRoute
+  AdminPageBuilderRoute: typeof AdminPageBuilderRoute
+  AdminPlatformsRoute: typeof AdminPlatformsRoute
+  AdminReferralsRoute: typeof AdminReferralsRoute
+  AdminReviewsRoute: typeof AdminReviewsRoute
+  AdminRolesRoute: typeof AdminRolesRoute
+  AdminSettingsRoute: typeof AdminSettingsRoute
+  AdminSocialRoute: typeof AdminSocialRoute
+  AdminSpreadsRoute: typeof AdminSpreadsRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  FirmsSlugRoute: typeof FirmsSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +597,358 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$category': {
+      id: '/$category'
+      path: '/$category'
+      fullPath: '/$category'
+      preLoaderRoute: typeof CategoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/careers': {
+      id: '/careers'
+      path: '/careers'
+      fullPath: '/careers'
+      preLoaderRoute: typeof CareersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges': {
+      id: '/challenges'
+      path: '/challenges'
+      fullPath: '/challenges'
+      preLoaderRoute: typeof ChallengesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/compare': {
+      id: '/compare'
+      path: '/compare'
+      fullPath: '/compare'
+      preLoaderRoute: typeof CompareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/deals': {
+      id: '/deals'
+      path: '/deals'
+      fullPath: '/deals'
+      preLoaderRoute: typeof DealsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/firms': {
+      id: '/firms'
+      path: '/firms'
+      fullPath: '/firms'
+      preLoaderRoute: typeof FirmsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-and-conditions': {
+      id: '/terms-and-conditions'
+      path: '/terms-and-conditions'
+      fullPath: '/terms-and-conditions'
+      preLoaderRoute: typeof TermsAndConditionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$category_/challenges': {
+      id: '/$category_/challenges'
+      path: '/$category/challenges'
+      fullPath: '/$category/challenges'
+      preLoaderRoute: typeof CategoryChallengesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$category_/deals': {
+      id: '/$category_/deals'
+      path: '/$category/deals'
+      fullPath: '/$category/deals'
+      preLoaderRoute: typeof CategoryDealsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/advertisements': {
+      id: '/admin_/advertisements'
+      path: '/admin/advertisements'
+      fullPath: '/admin/advertisements'
+      preLoaderRoute: typeof AdminAdvertisementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/awards': {
+      id: '/admin_/awards'
+      path: '/admin/awards'
+      fullPath: '/admin/awards'
+      preLoaderRoute: typeof AdminAwardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/blog': {
+      id: '/admin_/blog'
+      path: '/admin/blog'
+      fullPath: '/admin/blog'
+      preLoaderRoute: typeof AdminBlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/challenges': {
+      id: '/admin_/challenges'
+      path: '/admin/challenges'
+      fullPath: '/admin/challenges'
+      preLoaderRoute: typeof AdminChallengesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/deals': {
+      id: '/admin_/deals'
+      path: '/admin/deals'
+      fullPath: '/admin/deals'
+      preLoaderRoute: typeof AdminDealsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/events': {
+      id: '/admin_/events'
+      path: '/admin/events'
+      fullPath: '/admin/events'
+      preLoaderRoute: typeof AdminEventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/file-system': {
+      id: '/admin_/file-system'
+      path: '/admin/file-system'
+      fullPath: '/admin/file-system'
+      preLoaderRoute: typeof AdminFileSystemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/firms': {
+      id: '/admin_/firms'
+      path: '/admin/firms'
+      fullPath: '/admin/firms'
+      preLoaderRoute: typeof AdminFirmsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/login': {
+      id: '/admin_/login'
+      path: '/admin/login'
+      fullPath: '/admin/login'
+      preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/logs': {
+      id: '/admin_/logs'
+      path: '/admin/logs'
+      fullPath: '/admin/logs'
+      preLoaderRoute: typeof AdminLogsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/market-ticker': {
+      id: '/admin_/market-ticker'
+      path: '/admin/market-ticker'
+      fullPath: '/admin/market-ticker'
+      preLoaderRoute: typeof AdminMarketTickerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/media': {
+      id: '/admin_/media'
+      path: '/admin/media'
+      fullPath: '/admin/media'
+      preLoaderRoute: typeof AdminMediaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/messages': {
+      id: '/admin_/messages'
+      path: '/admin/messages'
+      fullPath: '/admin/messages'
+      preLoaderRoute: typeof AdminMessagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/page-builder': {
+      id: '/admin_/page-builder'
+      path: '/admin/page-builder'
+      fullPath: '/admin/page-builder'
+      preLoaderRoute: typeof AdminPageBuilderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/platforms': {
+      id: '/admin_/platforms'
+      path: '/admin/platforms'
+      fullPath: '/admin/platforms'
+      preLoaderRoute: typeof AdminPlatformsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/referrals': {
+      id: '/admin_/referrals'
+      path: '/admin/referrals'
+      fullPath: '/admin/referrals'
+      preLoaderRoute: typeof AdminReferralsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/reviews': {
+      id: '/admin_/reviews'
+      path: '/admin/reviews'
+      fullPath: '/admin/reviews'
+      preLoaderRoute: typeof AdminReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/roles': {
+      id: '/admin_/roles'
+      path: '/admin/roles'
+      fullPath: '/admin/roles'
+      preLoaderRoute: typeof AdminRolesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/settings': {
+      id: '/admin_/settings'
+      path: '/admin/settings'
+      fullPath: '/admin/settings'
+      preLoaderRoute: typeof AdminSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/social': {
+      id: '/admin_/social'
+      path: '/admin/social'
+      fullPath: '/admin/social'
+      preLoaderRoute: typeof AdminSocialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/spreads': {
+      id: '/admin_/spreads'
+      path: '/admin/spreads'
+      fullPath: '/admin/spreads'
+      preLoaderRoute: typeof AdminSpreadsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog_/$slug': {
+      id: '/blog_/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/firms_/$slug': {
+      id: '/firms_/$slug'
+      path: '/firms/$slug'
+      fullPath: '/firms/$slug'
+      preLoaderRoute: typeof FirmsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin_/challenges/batch': {
+      id: '/admin_/challenges/batch'
+      path: '/batch'
+      fullPath: '/admin/challenges/batch'
+      preLoaderRoute: typeof AdminChallengesBatchRouteImport
+      parentRoute: typeof AdminChallengesRoute
+    }
   }
 }
 
+interface AdminChallengesRouteChildren {
+  AdminChallengesBatchRoute: typeof AdminChallengesBatchRoute
+}
+
+const AdminChallengesRouteChildren: AdminChallengesRouteChildren = {
+  AdminChallengesBatchRoute: AdminChallengesBatchRoute,
+}
+
+const AdminChallengesRouteWithChildren = AdminChallengesRoute._addFileChildren(
+  AdminChallengesRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CategoryRoute: CategoryRoute,
+  AboutRoute: AboutRoute,
+  AdminRoute: AdminRoute,
+  BlogRoute: BlogRoute,
+  CareersRoute: CareersRoute,
+  ChallengesRoute: ChallengesRoute,
+  CompareRoute: CompareRoute,
+  ContactRoute: ContactRoute,
+  DealsRoute: DealsRoute,
+  EventsRoute: EventsRoute,
+  FirmsRoute: FirmsRoute,
+  PricingRoute: PricingRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  ProfileRoute: ProfileRoute,
+  ReviewsRoute: ReviewsRoute,
+  TermsAndConditionsRoute: TermsAndConditionsRoute,
+  CategoryChallengesRoute: CategoryChallengesRoute,
+  CategoryDealsRoute: CategoryDealsRoute,
+  AdminAdvertisementsRoute: AdminAdvertisementsRoute,
+  AdminAwardsRoute: AdminAwardsRoute,
+  AdminBlogRoute: AdminBlogRoute,
+  AdminChallengesRoute: AdminChallengesRouteWithChildren,
+  AdminDealsRoute: AdminDealsRoute,
+  AdminEventsRoute: AdminEventsRoute,
+  AdminFileSystemRoute: AdminFileSystemRoute,
+  AdminFirmsRoute: AdminFirmsRoute,
+  AdminLoginRoute: AdminLoginRoute,
+  AdminLogsRoute: AdminLogsRoute,
+  AdminMarketTickerRoute: AdminMarketTickerRoute,
+  AdminMediaRoute: AdminMediaRoute,
+  AdminMessagesRoute: AdminMessagesRoute,
+  AdminPageBuilderRoute: AdminPageBuilderRoute,
+  AdminPlatformsRoute: AdminPlatformsRoute,
+  AdminReferralsRoute: AdminReferralsRoute,
+  AdminReviewsRoute: AdminReviewsRoute,
+  AdminRolesRoute: AdminRolesRoute,
+  AdminSettingsRoute: AdminSettingsRoute,
+  AdminSocialRoute: AdminSocialRoute,
+  AdminSpreadsRoute: AdminSpreadsRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  FirmsSlugRoute: FirmsSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Application architecture
+- Keep TanStack Start as the application bootstrap; original page content is exposed through individual file routes and a shared shell to preserve public URLs.
+- Isolate original browser service modules behind lazy ClientOnly boundaries because Firebase and storage initialization must not execute during SSR.
+- Translate legacy navigation and image imports through the compatibility modules so the preserved source runs without a second router or Next.js runtime.
+- Preserve the imported project's strict TypeScript semantics without enabling extra index-access or exact-optional restrictions, avoiding unrelated source rewrites during migration.
